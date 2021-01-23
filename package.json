@@ -1,0 +1,38 @@
+{
+  "name": "@guilhermethales/root",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "lerna run build",
+    "build:watch": "tsc --watch",
+    "format": "prettier src/* --write",
+    "start": "lerna run start",
+    "storybook": "start-storybook --node-resolve --watch --open",
+    "storybook:build": "build-storybook",
+    "bootstrap": "npm install && npm run hoist",
+    "hoist": "lerna bootstrap --hoist",
+    "lernaupdate": "lernaupdate"
+  },
+  "devDependencies": {
+    "@open-wc/demoing-storybook": "^2.4.7",
+    "@open-wc/testing": "^2.5.10",
+    "@open-wc/testing-karma": "^3.3.11",
+    "@typescript-eslint/eslint-plugin": "^2.27.0",
+    "@typescript-eslint/parser": "^2.27.0",
+    "deepmerge": "^4.2.2",
+    "es-dev-server": "^1.46.1",
+    "lerna": "^3.22.1",
+    "lit-analyzer": "^1.1.10",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.4",
+    "rimraf": "^3.0.2",
+    "rollup": "^1.32.1",
+    "typescript": "^3.8.3",
+    "web-component-analyzer": "^1.0.3"
+  }
+}
